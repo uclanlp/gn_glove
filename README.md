@@ -1,5 +1,5 @@
-# debias_glove
-Learning Gender-Neutral Word Embeddings
+# Learning Gender-Neutral Word Embeddings
+[Jieyu Zhao](http://jyzhao.net), Yichao Zhou, Zeyu Li, [Wei Wang](http://web.cs.ucla.edu/~weiwang/), [Kai-Wei Chang](http://kwchang.net)
 
 Our pretrained word embeddings can be found [here](https://drive.google.com/drive/folders/1pAjJL_klhKcUFXdcAsi1VDQYRSeTrbsr?usp=sharing).
 
