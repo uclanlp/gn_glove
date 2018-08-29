@@ -8,3 +8,6 @@ The seed words we use in our paper is under [wordlist](/wordlist).
 The isBias dataset can be found under [SemBias](/SemBias/).
 
 You can run the code same way as original GloVe: https://github.com/stanfordnlp/GloVe 
+
+### License
+See the LICENSE file.
