@@ -1,4 +1,4 @@
-//  Modifications copyright (C) 2013 <uclanlp/gn_glove>
+//  Modifications copyright (C) 2013 <University of California, Los Angeles/uclannlp>
 //  Tool to calculate word-word cooccurrence statistics
 //
 //  Copyright (c) 2014 The Board of Trustees of

@@ -1,3 +1,4 @@
+//  Modifications copyright (C) 2013 <University of California, Los Angeles/uclannlp>
 //  GloVe: Global Vectors for Word Representation
 //
 //  Copyright (c) 2014 The Board of Trustees of
@@ -21,8 +22,6 @@
 //    GlobalVectors@googlegroups.com
 //    http://nlp.stanford.edu/projects/glove/
 
-// TODO:
-//      Release all memory required by `free()`
 
 #include <stdio.h>
 #include <stdlib.h>
