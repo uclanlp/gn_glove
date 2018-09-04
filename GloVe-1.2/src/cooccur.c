@@ -29,7 +29,7 @@
 #include "cooccur.h"
 #include "data_struct.h"
 #include "const.h"
-#include "temp.h"
+//#include "temp.h"
 
 
 //typedef struct hashrec2 {
