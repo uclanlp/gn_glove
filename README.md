@@ -14,7 +14,7 @@ The seed words we use in our paper is under [wordlist](/wordlist).
 
 The SemBias dataset can be found under [SemBias](/SemBias/).
 
-You can run the code using "debias.sh" or the same way as original GloVe: https://github.com/stanfordnlp/GloVe 
+You can run the code using "debias.sh" (Please change the corresponding parameters).
 
 ### License
 See the LICENSE file.
