@@ -8,7 +8,7 @@ Word embedding models have become a fundamental component in a wide range of Nat
 ## Updates:
 In Table 1 and 3, it should be "Hard-GloVe". And on Page 5, it should be "OntoNotes". 
 
-Our pretrained word embeddings can be found [here](https://drive.google.com/a/g.ucla.edu/file/d/1v82WF43w-lE-vpZd0JC1K8WYZQkTy_ii/view?usp=sharing).
+Our pretrained word embeddings can be found [here](https://drive.google.com/a/g.ucla.edu/file/d/1v82WF43w-lE-vpZd0JC1K8WYZQkTy_ii/view?usp=sharing). And GloVe trained on this Wikidump dataset can be found [here](https://drive.google.com/open?id=1jrbQmpB5ZNH4w54yujeAvNFAfVEG0SuE). 
 
 The seed words we use in our paper is under [wordlist](/wordlist).
 
