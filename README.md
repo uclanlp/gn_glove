@@ -12,7 +12,7 @@ Our pretrained word embeddings can be found [here](https://drive.google.com/a/g.
 
 The seed words we use in our paper is under [wordlist](/wordlist).
 
-The SemBias dataset can be found under [SemBias](/SemBias/).
+The SemBias dataset can be found under [SemBias](/SemBias/). The last 40 instances are the "subset" we used in our paper.
 
 You can run the code using "debias.sh" (Please change the corresponding parameters).
 
