@@ -32,10 +32,10 @@
 //#include "temp.h"
 
 
-//typedef struct hashrec2 {
-//    char        *word;
-//    long long id;
-//} HASHREC2;
+typedef struct hashrec2 {
+    char        *word;
+    long long id;
+} HASHREC2;
 
 
 
@@ -98,8 +98,8 @@ void hashinsert(HASHREC **ht, char *w, long long id) {
     for(hprv = NULL, htmp = ht[hval]; htmp != NULL && scmp(htmp->word, w) != 0; hprv = htmp, htmp = htmp->next);
     if(htmp == NULL) {
         htmp = (HASHREC *) malloc(sizeof(HASHREC));
-//        htmp->word = (char *) malloc(strlen(w) + 1);
-        htmp->word = (char *) malloc(MAX_WORD_LENGTH);
+        htmp->word = (char *) malloc(strlen(w) + 1);
+//        htmp->word = (char *) malloc(MAX_WORD_LENGTH);
         strcpy(htmp->word, w);
         htmp->id = id;
         htmp->next = NULL;
@@ -281,11 +281,12 @@ int write_hash_dump(HASHREC **ht){
     for(i=0; i < TSIZE; i++){
         htmp = ht[i];
         while(htmp != NULL){
+            fprintf(stderr, "%s\t%llu\n", htmp->word, htmp->id);
             count++;
-            strcpy(htmp2->word, htmp->word);
-            htmp2->id = htmp->id;
-            //fprintf(stderr, "%s\t%llu\n", htmp->word, htmp->id);
-            fwrite(htmp2, sizeof(HASHREC2), 1, fid);
+            //strcpy(htmp2->word, htmp->word);
+            //htmp2->id = htmp->id;
+            //fprintf(stderr, "%s\t%llu\n", htmp2->word, htmp2->id);
+            fwrite(htmp, sizeof(HASHREC), 1, fid);
             htmp = htmp -> next;
         }
     }
