@@ -32,10 +32,10 @@
 //#include "temp.h"
 
 
-//typedef struct hashrec2 {
-//    char        *word;
-//    long long id;
-//} HASHREC2;
+typedef struct hashrec2 {
+    char        *word;
+    long long id;
+} HASHREC2;
 
 
 
