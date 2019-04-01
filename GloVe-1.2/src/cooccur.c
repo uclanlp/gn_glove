@@ -277,13 +277,13 @@ int write_hash_dump(HASHREC **ht){
     long long i;
     int count = 0;
     HASHREC *htmp = (HASHREC *)malloc(sizeof(HASHREC));
-    HASHREC2 *htmp2 = (HASHREC2 *)malloc(sizeof(HASHREC2));
+    //HASHREC2 *htmp2 = (HASHREC2 *)malloc(sizeof(HASHREC2));
     for(i=0; i < TSIZE; i++){
         htmp = ht[i];
         while(htmp != NULL){
             fprintf(stderr, "%s\t%llu\n", htmp->word, htmp->id);
             count++;
-            //strcpy(htmp2->word, htmp->word);
+           // strcpy(htmp2->word, htmp->word);
             //htmp2->id = htmp->id;
             //fprintf(stderr, "%s\t%llu\n", htmp2->word, htmp2->id);
             fwrite(htmp, sizeof(HASHREC), 1, fid);
