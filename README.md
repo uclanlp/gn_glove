@@ -1,4 +1,4 @@
-# Learning Gender-Neutral Word Embeddings (EMNLP 2018)
+# [Learning Gender-Neutral Word Embeddings (EMNLP 2018)](https://arxiv.org/abs/1809.01496)
 [Jieyu Zhao](http://jyzhao.net), Yichao Zhou, Zeyu Li, [Wei Wang](http://web.cs.ucla.edu/~weiwang/), [Kai-Wei Chang](http://kwchang.net) 
 
 ## Abstract
