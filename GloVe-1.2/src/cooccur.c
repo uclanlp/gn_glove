@@ -29,13 +29,13 @@
 #include "cooccur.h"
 #include "data_struct.h"
 #include "const.h"
-//#include "temp.h"
+#include "temp.h"
 
 
-typedef struct hashrec2 {
-    char        *word;
-    long long id;
-} HASHREC2;
+// typedef struct hashrec2 {
+//     char        *word;
+//     long long id;
+// } HASHREC2;
 
 
 
@@ -106,7 +106,7 @@ void hashinsert(HASHREC **ht, char *w, long long id) {
         if(hprv == NULL) ht[hval] = htmp;
         else hprv->next = htmp;
     }
-    else fprintf(stderr, "Error, duplicate entry located: %s.\n",htmp->word);
+    else fprintf(stderr, "Error in cooccur.c file, duplicate entry located: %s.\n",htmp->word);
     return;
 }
 
@@ -277,16 +277,16 @@ int write_hash_dump(HASHREC **ht){
     long long i;
     int count = 0;
     HASHREC *htmp = (HASHREC *)malloc(sizeof(HASHREC));
-    //HASHREC2 *htmp2 = (HASHREC2 *)malloc(sizeof(HASHREC2));
+    HASHREC2 *htmp2 = (HASHREC2 *)malloc(sizeof(HASHREC2));
     for(i=0; i < TSIZE; i++){
         htmp = ht[i];
         while(htmp != NULL){
             fprintf(stderr, "%s\t%llu\n", htmp->word, htmp->id);
             count++;
-           // strcpy(htmp2->word, htmp->word);
-            //htmp2->id = htmp->id;
-            //fprintf(stderr, "%s\t%llu\n", htmp2->word, htmp2->id);
-            fwrite(htmp, sizeof(HASHREC), 1, fid);
+            strncpy(htmp2->word, htmp->word, 50);
+            htmp2->id = htmp->id;
+            fprintf(stderr, "%s\t%llu\n", htmp2->word, htmp2->id);
+            fwrite(htmp2, sizeof(HASHREC2), 1, fid);
             htmp = htmp -> next;
         }
     }
@@ -327,7 +327,7 @@ int get_cooccurrence() {
     /* TODO: [Original Comments: Here id is not used: inserting vocab words into hash table with their frequency rank, j]
      * where does id goes to then?*/
     fclose(fid);
-
+    
     /* Write hash dump function right here!!!*/
     write_hash_dump(vocab_hash); // Write hash table to file
 

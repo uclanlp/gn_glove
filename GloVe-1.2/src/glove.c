@@ -27,7 +27,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include <string.h>
 #include <pthread.h>
 #include <assert.h>
 #include "const.h"
@@ -42,8 +41,8 @@
 //} HASHREC;
 
 
-real lambda1 = 0.5;
-real lambda2 = 0.3;
+real lambda1 = 0.8;
+real lambda2 = 0.8;
 int verbose = 2; // 0, 1, or 2
 int use_unk_vec = 1; // 0 or 1
 int num_threads = 8; // pthreads
@@ -145,6 +144,7 @@ void initialize_parameters() {
     female_count = 0;
     for (i = 0; i < pair_count ; i++){
         temp = hashsearch(vocab_hash, male_words[i]);
+        
         if (temp != NULL){
             male_count ++;
             word_index = temp->id;

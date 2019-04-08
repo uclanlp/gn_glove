@@ -72,36 +72,36 @@ void hashinsert(HASHREC **ht, char *w, long long id) {
     for(hprv = NULL, htmp = ht[hval]; htmp != NULL && scmp(htmp->word, w) != 0; hprv = htmp, htmp = htmp->next);
     if(htmp == NULL) {
         htmp = (HASHREC *) malloc(sizeof(HASHREC));
-//        htmp->word = (char *) malloc(strlen(w) + 1);
-        htmp->word = (char *) malloc(MAX_WORD_LENGTH);
+        htmp->word = (char *) malloc(MAX_STRING_LENGTH);
         strcpy(htmp->word, w);
         htmp->id = id;
         htmp->next = NULL;
         if(hprv == NULL) ht[hval] = htmp;
         else hprv->next = htmp;
     }
-    else fprintf(stderr, "Error, duplicate entry located: %s.\n",htmp->word);
+    else fprintf(stderr, "Error in get_vocabhash.c, duplicate entry located: %s.\n",htmp->word);
     return;
 }
 
 HASHREC **get_vocabhash(char *filename){
     FILE *fin;
     fin = fopen(filename, "rb");
-    HASHREC2 vocab_unit;
+    HASHREC2 *vocab_unit = (HASHREC2 *)malloc(sizeof(HASHREC2));
     HASHREC **vocab_hash = inithashtable();
-    while(fread(&vocab_unit, sizeof(vocab_unit), 1, fin)){
-        hashinsert(vocab_hash, vocab_unit.word, vocab_unit.id);
+    
+    while(fread(vocab_unit, sizeof(HASHREC2), 1, fin)){
+        hashinsert(vocab_hash, vocab_unit->word, vocab_unit->id);
     }
-   /* int i = 0;
-    for(i=0; i< 100; i++){
-        HASHREC *htmp=vocab_hash[i];
-        while(htmp!= NULL){
-            printf("%s\t%llu\n", htmp->word, htmp->id);
-            htmp = htmp->next;
-        }
+//    int i = 0;
+//     for(i=0; i< 100; i++){
+//         HASHREC *htmp=vocab_hash[i];
+//         while(htmp!= NULL){
+//             printf("%s\t%llu\n", htmp->word, htmp->id);
+//             htmp = htmp->next;
+//         }
 
-    }
-    printf("%llu",hashsearch(vocab_hash, (char *)"tracked")->id);*/
+//     }
+    // printf("%llu",hashsearch(vocab_hash, (char *)"tracked")->id);
     fclose(fin);
     return vocab_hash;
 }
