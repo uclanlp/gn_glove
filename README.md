@@ -1,4 +1,4 @@
-# Learning Gender-Neutral Word Embeddings (EMNLP 2018)
+# [Learning Gender-Neutral Word Embeddings (EMNLP 2018)](https://arxiv.org/abs/1809.01496)
 [Jieyu Zhao](http://jyzhao.net), Yichao Zhou, Zeyu Li, [Wei Wang](http://web.cs.ucla.edu/~weiwang/), [Kai-Wei Chang](http://kwchang.net) 
 
 ## Abstract
@@ -6,6 +6,11 @@ Word embedding models have become a fundamental component in a wide range of Nat
 
 ------
 ## Updates:
+
+Please note the embeddings trained by us didn't do lowercase.
+
+
+------
 01/14/2019
 
 We also train the GN-GloVe using 1-billion training data. It can be downloaded [here](https://drive.google.com/a/g.ucla.edu/file/d/1g1QPqbIlQorwlfGShtPbZVk6mfwodQgE/view?usp=sharing).
