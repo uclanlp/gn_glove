@@ -6,6 +6,11 @@ Word embedding models have become a fundamental component in a wide range of Nat
 
 ------
 ## Updates:
+
+Please note the embeddings trained by us didn't do lowercase.
+
+
+------
 01/14/2019
 
 We also train the GN-GloVe using 1-billion training data. It can be downloaded [here](https://drive.google.com/a/g.ucla.edu/file/d/1g1QPqbIlQorwlfGShtPbZVk6mfwodQgE/view?usp=sharing).
