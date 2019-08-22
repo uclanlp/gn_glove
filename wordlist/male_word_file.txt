@@ -12,7 +12,6 @@ barman
 countrymen
 brideprice
 hosts
-potential_suitors
 airmen
 andropause
 penis
@@ -133,7 +132,7 @@ fiance
 colts
 husbands
 suitor
-maternity
+paternity
 he
 businessman
 masseurs
@@ -145,7 +144,7 @@ kings
 brothers
 masters
 stepfather
-brides
+grooms
 son
 studs
 cowboy
