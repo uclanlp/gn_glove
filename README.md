@@ -7,8 +7,9 @@ Word embedding models have become a fundamental component in a wide range of Nat
 ------
 ## Updates:
 
-Please note the embeddings trained by us didn't do lowercase.
+**The coreference model in this paper is based on end2end 2017 version.**
 
+Please note the embeddings trained by us didn't do lowercase.
 
 ------
 01/14/2019
