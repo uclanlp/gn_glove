@@ -11,6 +11,7 @@ Word embedding models have become a fundamental component in a wide range of Nat
 
 Please note the embeddings trained by us didn't do lowercase.
 
+**Please modify the debias.sh to your own datapath (line 18).**
 ------
 01/14/2019
 
